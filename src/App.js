@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Feedback from './Components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+const resources = {
+  emojis: [
+    {
+      id: 0,
+      name: 'Sad',
+      imageUrl: 'https://tse3.mm.bing.net/th?id=OIP.FNx8zNSGAWV306j1BsocDAHaHk&pid=Api&P=0&h=180',
+    },
+    {
+      id: 1,
+      name: 'None',
+      imageUrl: 'https://assets.ccbp.in/frontend/react-js/none-emoji-img.png',
+    },
+    {
+      id: 2,
+      name: 'Happy',
+      imageUrl: 'https://tse1.mm.bing.net/th?id=OIP.baJgAzbanFoKdGA8XnG7qAHaHa&pid=Api&P=0&h=180',
+    },
+  ],
+  loveEmojiUrl: 'https://tse3.mm.bing.net/th?id=OIP.lBh-2EtIpP_DYl6lQuSrSwHaHa&pid=Api&P=0&h=180',
 }
 
-export default App;
+const App = () => <Feedback resources={resources} />
+
+export default App
